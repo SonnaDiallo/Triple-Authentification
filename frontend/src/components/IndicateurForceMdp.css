@@ -1,0 +1,107 @@
+.force-mdp-container {
+  margin-top: 8px;
+}
+
+.force-mdp-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.force-mdp-bar-container {
+  flex: 1;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.force-mdp-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  width: 0%;
+}
+
+.force-mdp-texte {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+.force-mdp-details-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.force-mdp-details-btn:hover {
+  color: #374151;
+}
+
+.force-mdp-details {
+  margin-top: 8px;
+  padding: 8px;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 12px;
+  animation: slideDown 0.2s ease;
+}
+
+.force-mdp-score {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+.force-mdp-conseils {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.force-mdp-conseil {
+  color: #6b7280;
+  line-height: 1.3;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme sombre */
+[data-theme="dark"] .force-mdp-bar-container {
+  background: #374151;
+}
+
+[data-theme="dark"] .force-mdp-details {
+  background: #374151;
+}
+
+[data-theme="dark"] .force-mdp-score {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .force-mdp-conseil {
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .force-mdp-details-btn {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .force-mdp-details-btn:hover {
+  color: #d1d5db;
+}

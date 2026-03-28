@@ -1,0 +1,48 @@
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loading-canvas {
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Theme clair */
+[data-theme="light"] .loading-text {
+  color: rgba(26, 32, 44, 0.8);
+}
+
+/* Variante compacte */
+.loading-spinner.compact {
+  padding: 1rem;
+}
+
+.loading-spinner.compact .loading-canvas {
+  width: 100px;
+  height: 100px;
+}
+
+.loading-spinner.compact .loading-text {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
